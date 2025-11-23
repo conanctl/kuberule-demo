@@ -3,6 +3,7 @@ required_annotations: []
 required_labels: []
 require_dashboard_link: false
 require_runbook_link: false
+# Ignore all system namespaces
 ignore_namespaces:
   - kube-system
   - kube-public

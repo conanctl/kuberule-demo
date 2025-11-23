@@ -4,3 +4,10 @@ high_threshold: 5
 medium_threshold: 10
 block_on_scan_error: false
 max_image_age_days: 90
+# Ignore system images to reduce noise for MVP
+ignore_images:
+  - "ghcr.io/digitalocean-packages/*"
+  - "alpine/git:*"
+exclude_images:
+  - "*digitalocean*"
+  - "*alpine/git*"
