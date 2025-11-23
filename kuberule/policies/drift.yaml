@@ -1,6 +1,6 @@
 enabled: true
 repository:
-  url: "https://github.com/YOUR_USERNAME/demo-repo"
+  url: "https://github.com/conanctl/kuberule-demo"
   branch: "main"
   path: "manifests"
   auth:
