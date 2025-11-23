@@ -7,5 +7,6 @@ ignore_namespaces:
   - kube-system
   - kube-public
   - kube-node-lease
+  - kuberule-system
 critical_namespaces:
   - production
