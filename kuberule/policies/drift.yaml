@@ -1,0 +1,37 @@
+enabled: true
+
+# Git repository for drift detection
+# KubeRule will compare live cluster state against this repository
+repository:
+  url: "https://github.com/YOUR_USERNAME/demo-repo"  # Replace with your actual GitHub repo URL
+  branch: "main"  # Branch to compare against
+  path: "manifests"  # Path to manifests directory in this repo
+
+  auth:
+    token: ""  # Optional: GitHub token for private repos
+    username: ""
+    password: ""
+
+# Resources to ignore during drift detection
+ignore_namespaces:
+  - kube-system
+  - kube-public
+  - kube-node-lease
+  - kuberule-system
+
+ignore_kinds:
+  - Secret
+  - ServiceAccount
+
+# Critical resources that require immediate attention if drifted
+critical_resources:
+  - "Deployment/demo-apps/payment-service"
+
+# Number of allowed drift items before triggering findings
+allowed_drift_count: 0
+
+# Custom severity by resource kind
+severity_by_kind:
+  Deployment: "high"
+  StatefulSet: "high"
+  ConfigMap: "medium"

@@ -1,0 +1,6 @@
+enabled: true
+critical_threshold: 1
+high_threshold: 5
+medium_threshold: 10
+block_on_scan_error: false  # Set to false if scanner binaries are not available
+max_image_age_days: 90
