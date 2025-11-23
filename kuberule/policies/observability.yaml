@@ -1,18 +1,11 @@
 enabled: true
-# Required annotations that must be present on workloads
 required_annotations: []
-# Required labels that must be present on workloads  
 required_labels: []
-# Whether dashboard links are required
 require_dashboard_link: false
-# Whether runbook links are required
 require_runbook_link: false
-# Namespaces to ignore (system namespaces typically excluded)
 ignore_namespaces:
   - kube-system
   - kube-public
   - kube-node-lease
-# Critical namespaces where violations are treated more strictly
 critical_namespaces:
   - production
-

@@ -1,5 +1,4 @@
 ---
-# Demo workloads with intentionally vulnerable images for CVE scanning demonstration
 apiVersion: v1
 kind: Namespace
 metadata:
