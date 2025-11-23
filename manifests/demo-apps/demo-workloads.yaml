@@ -19,7 +19,7 @@ metadata:
     kuberule.io/dashboard: "https://grafana.company.com/d/vulnerable-web-app"
     kuberule.io/runbook: "https://wiki.company.com/runbooks/vulnerable-web-app"
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: vulnerable-web-app
@@ -31,10 +31,11 @@ spec:
         team: frontend
       annotations:
         kuberule.io/owner: "frontend-team@company.com"
+        owner: "frontend-team"
     spec:
       containers:
       - name: web
-        image: nginx:1.18.0  # Older version with known vulnerabilities
+        image: nginx:1.27.0  # Updated to newer version
         ports:
         - containerPort: 80
         resources:
