@@ -8,4 +8,3 @@ max_image_age_days: 90
 exclude_images:
   - "ghcr.io/digitalocean-packages/"
   - "alpine/git"
-  - "ghcr.io/conanctl/kuberule/kuberule-engine"
